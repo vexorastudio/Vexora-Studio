@@ -29,14 +29,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Vexora Studio" },
+      { name: "description", content: "We create modern, fast, and visually clean websites that help businesses stand out online.
+From landing pages to full-scale websites, we focus on performance." },
       { name: "author", content: "Vexora Studio" },
       { property: "og:title", content: "Vexora Studio" },
-      { property: "og:description", content: "Розробка сайтів під ключ" },
+      { property: "og:description", content: "We create modern, fast, and visually clean websites that help businesses stand out online.
+From landing pages to full-scale websites, we focus on performance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Vexora" },
+      { name: "twitter:title", content: "Vexora Studio" },
+      { name: "twitter:description", content: "We create modern, fast, and visually clean websites that help businesses stand out online.
+From landing pages to full-scale websites, we focus on performance." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/UF2cFLHyGZOD0ntLgqBxCbjQc6M2/social-images/social-1777912832883-veroxstud.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/UF2cFLHyGZOD0ntLgqBxCbjQc6M2/social-images/social-1777912832883-veroxstud.webp" },
     ],
     links: [
       {
