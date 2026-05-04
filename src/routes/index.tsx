@@ -85,9 +85,14 @@ function Index() {
       </nav>
 
       <header id="top" className="vx-hero">
-        <div className="vx-orb vx-orb1" />
-        <div className="vx-orb vx-orb2" />
-        <div className="vx-orb vx-orb3" />
+        <div className="vx-hero-bg">
+          <div className="vx-grid" />
+          <div className="vx-spotlight" />
+          <div className="vx-stars" />
+          <div className="vx-beam" />
+          <div className="vx-beam" />
+          <div className="vx-beam" />
+        </div>
         <div className="vx-badge">
           <span className="vx-badge-dot" />
           {t.hero.badge}
