@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/logo.png";
 import { dicts, type Lang } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { OrderModal } from "@/components/OrderModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +23,8 @@ function Index() {
   const [lang, setLang] = useState<Lang>("uk");
   const t = dicts[lang];
   const [sent, setSent] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = (e?: React.MouseEvent) => { e?.preventDefault(); setModalOpen(true); };
 
   useEffect(() => {
     const stored = (typeof window !== "undefined" && localStorage.getItem("vx-lang")) as Lang | null;
@@ -80,7 +83,7 @@ function Index() {
             <li><a href="#contact">{t.nav.contact}</a></li>
           </ul>
           <LanguageSwitcher lang={lang} onChange={setLang} />
-          <a href="#contact" className="vx-nav-cta">{t.nav.cta}</a>
+          <a href="#contact" className="vx-nav-cta" onClick={openModal}>{t.nav.cta}</a>
         </div>
       </nav>
 
@@ -103,7 +106,7 @@ function Index() {
         </h1>
         <p className="vx-hero-sub">{t.hero.sub}</p>
         <div className="vx-hero-actions">
-          <a href="#contact" className="btn-primary">{t.hero.cta1}</a>
+          <a href="#contact" className="btn-primary" onClick={openModal}>{t.hero.cta1}</a>
           <a href="#services" className="btn-ghost">{t.hero.cta2}</a>
         </div>
 
@@ -219,6 +222,7 @@ function Index() {
           <li><a href="mailto:veroxastudiooo@gmail.com">{t.footer.email}</a></li>
         </ul>
       </footer>
+      <OrderModal open={modalOpen} onClose={() => setModalOpen(false)} lang={lang} />
     </div>
   );
 }
