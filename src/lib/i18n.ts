@@ -47,6 +47,27 @@ type Dict = {
     sent: string;
   };
   footer: { services: string; contact: string; email: string };
+  modal: {
+    title: string;
+    sub: string;
+    name: string;
+    namePh: string;
+    email: string;
+    emailPh: string;
+    tg: string;
+    tgPh: string;
+    type: string;
+    typeChoose: string;
+    types: string[];
+    message: string;
+    messagePh: string;
+    submit: string;
+    sending: string;
+    success: string;
+    successSub: string;
+    error: string;
+    close: string;
+  };
 };
 
 export const dicts: Record<Lang, Dict> = {
