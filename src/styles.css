@@ -428,6 +428,8 @@
 .vx-modal-form select:focus,
 .vx-modal-form textarea:focus { border-color: oklch(1 0 0 / .4); background: oklch(1 0 0 / .06); }
 .vx-modal-form textarea { resize: vertical; min-height: 90px; }
+.vx-modal-form select { color: #fff; }
+.vx-modal-form select option { background: #0a0a0a; color: #fff; }
 .vx-modal-submit { margin-top: 8px; width: 100%; }
 .vx-modal-error { color: #f87171; font-size: 13px; margin: 0; }
 .vx-modal-success { text-align: center; padding: 20px 0; }
